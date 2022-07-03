@@ -116,14 +116,3 @@ class YoutubeLiveStreamingApi {
     return await _authClient?.post(url, body: body) ?? Response('', 500);
   }
 }
-
-
-
-
-// curl --request POST \
-//   'https://youtube.googleapis.com/youtube/v3/liveBroadcasts?part=snippet%2CcontentDetails%2Cstatus&key=AIzaSyCmCikDqgMjY_BuJVwf0O9mA7bRtumDSEw' \
-//   --header 'Authorization: Bearer [YOUR_ACCESS_TOKEN]' \
-//   --header 'Accept: application/json' \
-//   --header 'Content-Type: application/json' \
-//   --data '{"snippet":{"title":"Test broadcast","scheduledStartTime":"2022-07-03 20:00:00"},"contentDetails":{"enableClosedCaptions":true,"enableContentEncryption":true,"enableDvr":true,"enableEmbed":true,"recordFromStart":true,"startWithSlate":true},"status":{"privacyStatus":"unlisted"}}' \
-//   --compressed
